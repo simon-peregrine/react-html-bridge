@@ -1,0 +1,28 @@
+{
+  "name": "react-html-bridge",
+  "version": "0.1.0",
+  "description": "A simple bridge to host individual React components inside externally provided HTML",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon-peregrine/react-html-bridge.git"
+  },
+  "author": "Simon Broadhead <simon@peregrinelabs.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simon-peregrine/react-html-bridge/issues"
+  },
+  "homepage": "https://github.com/simon-peregrine/react-html-bridge#readme",
+  "devDependencies": {
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  }
+}
