@@ -5,7 +5,7 @@ import * as ReactDOM from 'react-dom';
  * Find all elements with a `data-component` attribute and attempt to mount the specified React component in them.
  * The available components must be specified in the `components` argument.
  *
- * Initial props can be specified by creating a hidden (display: none) div somewhere on the page with a unique
+ * Initial props can be specified by creating a hidden (display: none) div somewhere on the page with a unique ID
  * containing Javascript code (properly escaped to avoid XSS attacks if it contains user-supplied input) that evaluates
  * to a props object. The container component can then specify the `data-props-id` attribute to be the ID of the div
  * containing the props.
