@@ -5,8 +5,7 @@
     "jsx": "react",
     "strict": true,
     "declaration": true,
-    "outDir": "dist",
-    "allowJs": true
+    "outDir": "dist"
   },
   "include": ["src/**/*"]
 }
