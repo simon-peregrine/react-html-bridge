@@ -4,7 +4,7 @@
   "description": "A simple bridge to host individual React components inside externally provided HTML",
   "main": "index.js",
   "scripts": {
-    "build": "tsc"
+    "prepare": "tsc"
   },
   "repository": {
     "type": "git",
