@@ -13,9 +13,14 @@ var ReactDOM = require("react-dom");
  */
 function reactHTMLBridge(components) {
     var componentMap = {};
-    components.forEach(function (component) {
-        componentMap[component.name] = component;
-    });
+    if (Array.isArray(components)) {
+        components.forEach(function (component) {
+            componentMap[component.name] = component;
+        });
+    }
+    else {
+        componentMap = components;
+    }
     var containers = document.querySelectorAll("[data-component]");
     Array.prototype.forEach.call(containers, function (container) {
         var componentName = container.dataset.component || '';

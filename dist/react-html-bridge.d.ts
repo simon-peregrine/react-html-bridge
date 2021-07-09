@@ -9,4 +9,6 @@ import * as React from 'react';
  * to a props object. The container component can then specify the `data-props-id` attribute to be the ID of the div
  * containing the props.
  */
-export default function reactHTMLBridge(components: [React.ClassType<any, any, any>]): void;
+export default function reactHTMLBridge(components: [React.ClassType<any, any, any>] | {
+    [name: string]: React.ClassType<any, any, any>;
+}): void;

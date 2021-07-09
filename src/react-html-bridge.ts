@@ -10,11 +10,16 @@ import * as ReactDOM from 'react-dom';
  * to a props object. The container component can then specify the `data-props-id` attribute to be the ID of the div
  * containing the props.
  */
-export default function reactHTMLBridge(components: [React.ClassType<any, any, any>]) {
-  const componentMap: { [name: string]: React.ClassType<any, any, any> } = {};
-  components.forEach(component => {
-    componentMap[component.name] = component;
-  });
+export default function reactHTMLBridge(components: [React.ClassType<any, any, any>] | { [name: string]: React.ClassType<any, any, any> }) {
+  let componentMap: { [name: string]: React.ClassType<any, any, any> } = {};
+  
+  if (Array.isArray(components)) {
+    components.forEach(component => {
+      componentMap[component.name] = component;
+    });
+  } else {
+    componentMap = components;
+  }
 
   const containers = document.querySelectorAll("[data-component]");
   Array.prototype.forEach.call(containers, (container: HTMLElement) => {
